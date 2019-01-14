@@ -86,7 +86,7 @@ extension ViewController: UITableViewDataSource {
         case .new, .downloaded:
             indicator.startAnimating()
             if (!tableView.isDragging && !tableView.isDecelerating) {
-                
+                self.startOperationsForPhotoRecord(photoDetails: photoDetails, indexPath: indexPath)
             }
         }
         return cell
